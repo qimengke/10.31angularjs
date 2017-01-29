@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app=angular.module('myApp',[]);
+			app.controller('indexCtrl',function($scope,$filter){
+				$scope.money=1000;
+				$scope.person=[
+					{id:0,name:'小明',age:8},
+					{id:1,name:'小红',age:9},
+					{id:2,name:'小刚',age:7}
+				];
+				$scope.xinshui=2000;
+				$scope.xinshui = $filter('currency')($scope.xinshui,'￥');
+				$scope.data = new Date();
+				
+			})
+		</script>
+	</head>
+	<body ng-controller='indexCtrl'>
+		<p>{{data|date}}</p>
+		<p>{{data|date:'yyyy-MM-dd'}}</p>
+		<p>{{data|date:'yyyy-MM-dd hh:mm:ss'}}</p>
+		<p>{{data|date:'yyyy/MM/dd'}}</p>
+		<p></p>
+		<p>{{money|currency}}</p>
+		<p>{{money|currency:'￥'}}</p>
+		<p></p>
+		<p ng-repeat='o in person'>{{o.name}}</p>
+		<p></p>
+		<p ng-repeat="o in person|orderBy:'age':'reverse'">{{o.name}}</p>
+	</body>
+</html>

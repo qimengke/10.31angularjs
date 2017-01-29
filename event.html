@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ng中的事件</title>
+	<script src='js/angular.js'></script>
+	<script>
+		
+		var app = angular.module('myApp',[]);
+		app.controller("loginCtrl",function($scope) {
+
+			$scope.ckName = function() {
+				console.info($scope.userName);
+			}
+			$scope.nameBlur = function() {
+				console.info('光标离开事件');
+			 }
+
+			$scope.arr = [1,2,3,4];
+			//获取循环当前的值
+			$scope.changeP = function(obj,i) {
+				console.info('循环绑定事件',obj,i);
+			}
+		})
+
+	</script>
+</head>
+<body>
+	
+	<div ng-controller="loginCtrl">
+		<p ng-repeat="o in arr" ng-click='changeP(o,$index)'>{{o}}</p>
+		<div>
+			<label for="userName">用户名:</label>
+			<!-- 事件也是通过指令进行绑定 -->
+			<input id='userName' ng-model='userName' type="text" ng-blur='nameBlur()' ng-change="ckName()" >
+		</div>
+		<div>
+			<label for="userPass">密码:</label><input id='userPass' type="password">
+		</div>
+	</div>
+</body>
+</html>

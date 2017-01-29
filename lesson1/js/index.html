@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>我的第一个angularjs</title>
+	<link rel="stylesheet" href="">
+	<script src='js/angular.js'></script>
+	<script>
+		//1.引入文件
+		//2.在我们要使用的结构中添加ng-app='随意'(一般一个页面只有一个ng-app)，代表程序入口，内部包含的代码以angularjs进行解析操作
+		//3.通过angular提供的方法进行编程 初始化
+		var app = angular.module("myApp",[]);
+
+		//4.controller 通过controller对页面结构进行分离和分层
+		//在页面标签中使用ng定义的指令ng-controller=“”
+		//通过angular初始化 返回的对象 调用一个controller方法
+		//依赖注入:在程序需要的时候对所引用的对象初始化
+		app.controller('titleCtrl',function($scope) {
+			//controller程序中通过依赖注入 注入一个$scope作用域
+			//$scope用于描述当前controller下所有的变量和函数方法
+			//$scope不能修改
+			$scope.userName = '程娇';
+			//MV的模式:在js中定义变量,在页面中定义表达式{{}}或指令，自动将数据渲染到页面上
+			//VM模式:页面进行双向绑定的数据如果有修改(input框),会响应的修改controller中对应的数据userName
+
+			//无论是MV还是VM 当某一方数据有修改的时候，都会触发脏检查机制，对页面和js进行从新构建。
+
+		})
+		app.controller('listCtrl',function() {
+		})
+	</script>
+</head>
+<body>
+	<!-- 标题 -->
+	<div ng-controller='titleCtrl'>
+	<!-- angular通过提供{{}}表达式对数据进行渲染 -->
+		{{userName}}
+		<!-- ng-xx 都是angularjs所提供的指令 用于执行特定功能 -->
+		<!-- 将model绑定在input标签上 使用ng-value -->
+		<!-- 讲model绑定在input上 并进行双向数据绑定 应该使用ng-model -->
+		<!-- 通过ng-model实现双向数据绑定 -->
+		<input type="text" ng-model="userName">
+	</div>
+	<!-- 列表显示 -->
+	<div ng-controller='listCtrl'></div>
+</body>
+</html>

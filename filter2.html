@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>自定义拦截器</title>
+	<script src='js/angular.js'></script>
+	<script>
+		var app = angular.module('myApp',[]);
+
+		app.filter("priceFilter",function() {
+			return function(val,arg1) {//在return中编写数据过滤
+				var number = 1;
+				if(val>=1000&val<2000) {
+					number = 0.9;
+				} else if(val>=2000) {
+					number= 0.8;
+				}
+				return arg1+val*number;
+			}
+		})
+
+		app.controller('indexCtrl',function($scope) {
+		})
+
+
+	</script>
+</head>
+<body>
+	<div ng-controller='indexCtrl'>
+		价钱:<input type="text" ng-model='money'>
+		<br>
+		数量:<input type="text" ng-model='count'>
+		<br>
+		<!-- 如果价钱超过2000 打8折 -->
+		<!-- 如果超过了1000 打9折-->
+		<p>说明:如果价钱超过2000 打8折 ,如果超过了1000 打9折</p>
+		总价:{{money*count|priceFilter:'$'}}
+	</div>
+</body>
+</html>	

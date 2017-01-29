@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app=angular.module('app',[]);
+			app.controller('indexCtrl',function($scope){
+				$scope.name="xiaona";
+				var a='你好';
+				setTimeout(function(){
+					$scope.$apply(function(){
+						$scope.name="xusir你好啊";
+					})
+				},2000);
+				$scope.chang=function(){
+					alert($scope.name);
+				}
+			})
+		</script>
+	</head>
+	<body>
+		<div ng-controller='indexCtrl'>
+			<p ng-click="chang()">判断是否修改数据</p>
+			{{name}}:{{a}}
+		</div>
+	</body>
+</html>

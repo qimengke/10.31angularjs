@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="js/lib/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="js/lib/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+	</head>
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide index1">
+					<img src="image/logo.png" class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0"/>
+					<p class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">秀出你的每一天</p>
+					<img src="image/bottom.png" class="ani" swiper-animate-effect="rotateInUpRight" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+				</div>
+				<div class="swiper-slide index2">
+					<p class="ani" swiper-animate-effect='fadeInUp' swiper-animate-duration='1s' swiper-animate-delay='0s'/>全新排版</p>
+               
+		            <p class="ani" swiper-animate-effect='fadeInUp' swiper-animate-duration='1s'  swiper-animate-delay='0s'/>更优雅，更舒适</p>
+		            <p class="ani" swiper-animate-effect='fadeInUp' swiper-animate-duration='1s' swiper-animate-delay='0.5s'/>多联系，不孤单</p>
+		            <p class="ani" swiper-animate-effect='fadeInLeft' swiper-animate-duration='1s' swiper-animate-delay='0.5s'/>走秀</p>
+		            <p class="ani" swiper-animate-effect='fadeInRight' swiper-animate-duration='1s' swiper-animate-delay='1s'/><span>与</span>你相伴</p>
+		               
+				</div>
+				<div class="swiper-slide index3">
+					<img src="image/tou.png" class="ani" swiper-animate-effect='fadeInDown'
+                 swiper-animate-duration='1s' swiper-animate-delay='0s'/>
+		            <p class="ani" swiper-animate-effect='fadeInDown' swiper-animate-duration='1s' swiper-animate-delay='0.5s'/>放入购物袋</p>
+		               
+		            <img src="image/clock.png" class="ani" swiper-animate-effect='fadeInRight' swiper-animate-duration='1s' swiper-animate-delay='0.7s'/>
+		                 
+		            <img src="image/chat.png" class="ani" swiper-animate-effect='fadeInLeft'  swiper-animate-duration='1s' swiper-animate-delay='0.9s'/>
+		                
+		            <p class="ani" swiper-animate-effect='fadeInDown' swiper-animate-duration='1s' swiper-animate-delay='1.5s'/>满288元免运费</p>
+		               
+		            <p class="ani" swiper-animate-effect='fadeInUp' swiper-animate-duration='1s' swiper-animate-delay='1.5s'/>（有活动还有更多惊喜哟！）</p>
+		               
+				</div>
+				<div class="swiper-slide index4">
+					<p class="ani" swiper-animate-effect='fadeInDown' swiper-animate-duration='1s' swiper-animate-delay='0.5s'/>走秀网商品</p>
+		            <img src="image/gift.png" class="ani" swiper-animate-effect='fadeInLeft' swiper-animate-duration='1s' swiper-animate-delay='0s'/>
+		                 
+		            <img src="image/chat2.png" class="ani" swiper-animate-effect='fadeInLeft' swiper-animate-duration='1s' swiper-animate-delay='0.7s'/>
+		                 
+		            <p class="ani" swiper-animate-effect='fadeInDown' swiper-animate-duration='1s' swiper-animate-delay='1.2s'/>每天十点</p>
+		               
+		            <p class="ani" swiper-animate-effect='fadeInUp' swiper-animate-duration='1s' swiper-animate-delay='1.2s'/>新品抢购</p>
+				</div>
+				<div class="swiper-slide index5">
+					<img src="image/tou2.png" class="ani" swiper-animate-effect='fadeInDown' swiper-animate-duration='1s' swiper-animate-delay='0s'/>
+	            	<p class="ani" swiper-animate-effect='fadeInDown' swiper-animate-duration='1s' swiper-animate-delay='0s'/>NOW,开启走秀购物之行......</p>
+	            	<p class="ani" swiper-animate-effect='swing' swiper-animate-duration='2s' swiper-animate-delay='0s'/><a href="7index.html">开始体验</a></p>
+				</div>
+			</div>
+			<div class="swiper-pagination">
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/lib/zepto.min.js">
+		
+	</script>
+	<script type="text/javascript" src="js/lib/swiper.min.js">
+		
+	</script>
+	<script type="text/javascript" src="js/lib/swiper.animate.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		var mySwiper = new Swiper(".swiper-container",{
+			pagination:".swiper-pagination",
+			onInit:function(swiper){
+				swiperAnimateCache(swiper);
+				swiperAnimate(swiper);
+			},
+			onSlideChangeEnd:function(swiper){
+				swiperAnimate(swiper);
+			}
+		})
+	</script>
+</html>

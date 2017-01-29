@@ -1,0 +1,44 @@
+
+
+.content{
+    width:100%;
+    height: 45rem;
+    margin-top: 3.58rem;
+    margin-bottom: 4.083rem;
+    overflow: hidden;
+    font-family: "黑体";
+    background-color: #F7F7F7;
+}
+.content h2{
+    width: 100%;
+    height: 3.416rem;
+    line-height: 3.416rem;
+    text-align: center;
+    color: #5D5D5D;
+    font-size: 1.375rem;
+    margin-top: 1.875rem;
+}
+.content .icon{
+    width: 10.208rem;
+    height: 10.208rem;
+    background-color: #D2D2D2;
+    border-radius: 5px;
+    color: #fff;
+    padding: .375rem;
+    margin: 0 auto;
+}
+.content .icon i{
+    font-size: 12rem;
+}
+
+.content .btn{
+    width: 17.666rem;
+    height: 3.958rem;
+    line-height: 3.958rem;
+    margin: 2.875rem auto;
+    background-image: -webkit-linear-gradient(bottom,#D91351,#F8618A);
+    color: #fff;
+    font-size: 1.875rem;
+    text-align: center;
+    border-radius: 3px;
+}

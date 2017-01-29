@@ -1,0 +1,51 @@
+前端框架
+anjular:
+	前端框架	
+		前端类库 jQuery zepto
+		UI框架	bootstrap jquery-easy-ui jquery-ui
+		功能业务框架 angular react bacbone emmber avalon
+	版本 
+		1.2以下支持ie8
+		1.3`1.不支持ie8 以1.5位版本讲
+	优点 
+		双向数据绑定  MVVM MVC 模式
+			MVC：module(实体) view（视图 html） controller(控制器)	
+			MVVM  module>view  view>model
+	ng程序
+
+上课01
+	引入js文件
+	在我们要使用的结构中添加ng-app
+	一般一个页面只有一个ng-app
+	ng-app 在html中添加 ng-app='myApp' 代表程序入口
+	通过angular提供的方法进行编程
+	var app=angular.module("myapp",[])
+	通过controller对页面结构进行分离，分层
+	在页面标签中使用ng-controller=""
+	通过angular初始化 放回对象 调用一个controller方法
+	app.controller('titleCtr',function(){
+		
+	})
+	$scope 作用域
+		在每个生成的controller都会存在一个作用域，用于描述当前
+		controller下的变量和函数
+		scope是通过$rootScope创建的
+		子scope可以调用父框的变量和属性
+		父scope不能调用子scrope的变量或函数
+		所有的scope最顶级的节点都是$rootscrope
+	$filter过滤器
+		自带过滤方法用于页面{currency 金钱 date时间 orderBY数据排序}
+		修改完数值后给某一变量重新赋值 会影响model实体
+	模块化编程
+		将相同的数据功能单独的创建一个文件进行管理维护方便调用
+		分层开发 
+			controller控制层  定义变量 接收变量
+			filter 对数据进行过滤和筛选
+	
+		明天：
+		数据校验 ng指令
+		ajax $http $q
+	作业: 1. angularjs 在页面中一般使用一个ng-app 如果使用两个 how to do it？
+        2.在controller中 使用 var定义是否会渲染到页面中
+        3.在controller 使用 setTimeout 为$scope 数据是否会渲染到页面上?如果不渲染怎么处理?
+        4.what is dirty脏检查？

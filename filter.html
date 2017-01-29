@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script src='js/angular.js'></script>
+	<script>
+		var app = angular.module('myApp',[]);
+		//注入一个拦截服务
+		app.controller("indexCtrl",function($scope,$filter) {
+			$scope.money = 1000;
+			$scope.lowWord = 'you are a low';
+
+			$scope.person = [
+			{id:0,name:'小明',age:8},
+			{id:1,name:'小红',age:9},
+			{id:2,name:'小刚',age:7}]
+
+			$scope.gongzi = 20000;
+
+			$scope.gongzi = $filter('currency')($scope.gongzi,'￥');
+			$scope.data = new Date();
+		})	
+	</script>
+</head>
+<body ng-controller='indexCtrl'>
+	<p>{{data|date}}</p>
+	<p>{{data|date:'yyyy-MM-dd'}}</p>
+	<p>{{data|date:'yyyy-MM-dd hh:mm:ss'}}</p>
+	<p>{{data|date:'yyyy/MM/dd'}}</p>
+	<p></p>
+<!-- ng自带过滤方法 在变量的后面使用 | 进行过滤 -->
+<!-- 过滤 产生过滤筛选的数据不会影响到model的原有值 -->
+	<p>{{money|currency }}</p>
+	<p>{{money|currency:'￥' }}</p>
+	<input type="text" ng-model='money'>
+
+	<p>大写文字{{lowWord|uppercase}}</p>
+
+	<p>小写文字{{lowWord|lowercase}}</p>
+
+	<div>正常情况下：
+		<p ng-repeat='o in person'>{{o.name}}</p>
+	</div>
+	<!-- reverse 对排序进行反转 -->
+	<div>根据年龄排序:
+		<p ng-repeat="o in person|orderBy:'age':'reverse'">{{o.name}}</p>
+	</div>
+
+</body>
+</html>

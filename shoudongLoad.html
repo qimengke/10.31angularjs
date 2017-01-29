@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var app=angular.module('app',[]);
+			app.run(function($rootScope) {
+				$rootScope.name = '我是老大';
+			})
+			var bpp=angular.module('bpp',[]);
+			bpp.run(function($rootScope) {
+				$rootScope.name = '我是xiaona';
+			})
+			window.onload = function() {
+			//手动加载angularjs
+				angular.bootstrap(document.getElementById('app'),['app']);
+				angular.bootstrap(document.getElementById('bpp'),['bpp']);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="app">{{name}}</div>
+		<div id="bpp">{{name}}</div>
+	</body>
+</html>

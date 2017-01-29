@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>angular用户管理系统</title>
+	<script src='js/plugins/angular.js'></script>
+	<!-- controller 控制层 -->
+	<script src='js/controller.js'></script>
+	<!-- filter 过滤层 -->
+	<script src='js/filter.js'></script>
+</head>
+<body ng-controller='indexCtrl'>
+	{{money|moneyFilter:'$'}}
+</body>
+</html>

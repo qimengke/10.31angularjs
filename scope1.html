@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="">
+		<script src='js/angular.js'></script>
+		<script type="text/javascript">
+			var app=angular.module('myApp',[]);
+			app.controller('listCtrl',function($scope){
+				$scope.sex=0;
+				$scope.text='呵呵呵哒了';
+				$scope.list=[
+					{id:0,name:'heh'},{id:1,name:'qqq'}
+				];
+				$scope.attr=[1,1,2];
+			})
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,218 @@
+{
+  "7index.html": {
+    "resources": [
+      "fontawesome/fonts/fontawesome-webfont.woff",
+      "css/7index.css",
+      "css/common.css",
+      "js/public.js",
+      "js/lib/iscroll-min.js",
+      "fontawesome/css/font-awesome.css",
+      "image/1.png",
+      "js/index.js",
+      "js/lib/jquery.min.js",
+      "image/3.png",
+      "18intro.html",
+      "9shopCar.html",
+      "11myShow.html",
+      "8classify.html",
+      "24more.html",
+      "js/lib/zepto.min.js",
+      "12login.html"
+    ],
+    "refer": [
+      "18intro.html",
+      "9shopCar.html",
+      "11myShow.html",
+      "8classify.html",
+      "24more.html",
+      "12login.html"
+    ]
+  },
+  "18intro.html": {
+    "resources": [
+      "js/lib/swiper.min.js",
+      "js/lib/swiper.min.css",
+      "js/18intro.js",
+      "css/18intro.css",
+      "fontawesome/fonts/fontawesome-webfont.woff",
+      "css/common.css",
+      "js/public.js",
+      "fontawesome/css/font-awesome.css",
+      "js/lib/jquery.min.js",
+      "js/lib/zepto.min.js",
+      "7index.html"
+    ],
+    "refer": [
+      "7index.html"
+    ]
+  },
+  "9shopCar.html": {
+    "resources": [
+      "css/9shopCar.css",
+      "js/shopCar.js",
+      "js/lib/jquery-2.2.3.min.js",
+      "fontawesome/fonts/fontawesome-webfont.woff",
+      "css/common.css",
+      "js/public.js",
+      "js/lib/iscroll-min.js",
+      "fontawesome/css/font-awesome.css",
+      "11myShow.html",
+      "7index.html",
+      "8classify.html",
+      "24more.html",
+      "js/lib/zepto.min.js"
+    ],
+    "refer": [
+      "11myShow.html",
+      "7index.html",
+      "8classify.html",
+      "24more.html"
+    ]
+  },
+  "11myShow.html": {
+    "resources": [
+      "css/11myshow.css",
+      "7index.html",
+      "9shopCar.html",
+      "24more.html",
+      "12login.html",
+      "js/login.js",
+      "js/lib/zepto.min.js",
+      "js/myShow.js",
+      "8classify.html",
+      "15coupon.html",
+      "14indent.html",
+      "16record.html",
+      "17collect.html"
+    ],
+    "refer": [
+      "7index.html",
+      "9shopCar.html",
+      "12login.html",
+      "24more.html",
+      "8classify.html",
+      "15coupon.html",
+      "14indent.html",
+      "16record.html",
+      "17collect.html"
+    ]
+  },
+  "8classify.html": {
+    "resources": [
+      "css/8classify.css",
+      "9shopCar.html",
+      "7index.html",
+      "11myShow.html"
+    ],
+    "refer": [
+      "9shopCar.html",
+      "7index.html",
+      "11myShow.html"
+    ]
+  },
+  "24more.html": {
+    "resources": [
+      "css/24more.css",
+      "11myShow.html",
+      "7index.html",
+      "js/more.js"
+    ],
+    "refer": [
+      "11myShow.html",
+      "7index.html"
+    ]
+  },
+  "12login.html": {
+    "resources": [
+      "css/12login.css",
+      "9shopCar.html",
+      "js/login.js",
+      "js/lib/zepto.min.js",
+      "fontawesome/fonts/fontawesome-webfont.woff",
+      "css/common.css",
+      "fontawesome/css/font-awesome.css",
+      "13register.html",
+      "7index.html",
+      "11myShow.html",
+      "24more.html"
+    ],
+    "refer": [
+      "9shopCar.html",
+      "11myShow.html",
+      "24more.html",
+      "7index.html"
+    ]
+  },
+  "13register.html": {
+    "resources": [
+      "css/13register.css",
+      "js/register.js",
+      "12login.html"
+    ],
+    "refer": []
+  },
+  "animate.html": {
+    "resources": [
+      "image/logo.png",
+      "image/chat.png",
+      "image/chat2.png",
+      "css/animate.css",
+      "js/lib/animate.min.css",
+      "image/clock.png",
+      "js/lib/swiper.min.js",
+      "js/lib/swiper.min.css",
+      "css/common.css",
+      "js/lib/swiper.animate.min.js",
+      "image/tou.png",
+      "js/lib/zepto.min.js",
+      "image/tou2.png",
+      "image/gift.png",
+      "image/bg.png",
+      "image/bottom.png",
+      "7index.html"
+    ],
+    "refer": [
+      "7index.html"
+    ]
+  },
+  "15coupon.html": {
+    "resources": [
+      "11myShow.html",
+      "css/15coupon.css"
+    ],
+    "refer": [
+      "11myShow.html"
+    ]
+  },
+  "14indent.html": {
+    "resources": [
+      "image/5.png",
+      "css/14indent.css",
+      "image/4.png",
+      "11myShow.html"
+    ],
+    "refer": [
+      "11myShow.html"
+    ]
+  },
+  "16record.html": {
+    "resources": [
+      "css/16record.css",
+      "js/record.js",
+      "11myShow.html"
+    ],
+    "refer": [
+      "11myShow.html"
+    ]
+  },
+  "17collect.html": {
+    "resources": [
+      "css/17collect.css",
+      "image/7.png",
+      "11myShow.html"
+    ],
+    "refer": [
+      "11myShow.html"
+    ]
+  }
+}

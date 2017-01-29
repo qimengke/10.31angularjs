@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>我的第一个angularjs</title>
+	<link rel="stylesheet" href="">
+	<script src='js/angular.js'></script>
+	<script>
+		//1.引入文件
+		//2.在我们要使用的结构中添加ng-app='随意'(一般一个页面只有一个ng-app)，代表程序入口，内部包含的代码以angularjs进行解析操作
+		//3.通过angular提供的方法进行编程 初始化
+		var app = angular.module("myApp",[]);
+
+		//4.controller 通过controller对页面结构进行分离和分层
+		//在页面标签中使用ng定义的指令ng-controller=“”
+
+		//通过angular初始化 返回的对象 调用一个controller方法
+		app.controller('titleCtrl',function($scope) {
+			//controller程序中通过依赖注入 注入一个$scope作用域
+			//$scope用于描述当前controller下所有的变量和函数方法
+			//$scope不能修改
+			$scope.userName = '程娇';
+			//MV的模式:在js中定义变量,在页面中定义表达式{{}}或指令，自动将数据渲染到页面上
+		})
+		app.controller('listCtrl',function() {
+			
+		})
+	</script>
+</head>
+<body>
+	<!-- 标题 -->
+	<div ng-controller='titleCtrl'>
+	<!-- angular通过提供{{}}表达式对数据进行渲染 -->
+		{{userName}}
+	</div>
+	<!-- 列表显示 -->
+	<div ng-controller='listCtrl'></div>
+</body>
+</html>

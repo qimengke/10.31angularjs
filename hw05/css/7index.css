@@ -1,0 +1,91 @@
+
+
+/*中间内容部分content*/
+.content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 7.291rem;
+    bottom: 4.083rem;
+    left: 0;
+    overflow: hidden;
+    background-color: #fff;
+}
+.banner{
+    width:100%;
+    height: 10.458rem;
+    background: url("../image/1.png") no-repeat;
+    background-size:100% 100%;
+}
+
+.pro_list{
+    width:100%;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.pro_list .wrapper{
+	-webkit-box-flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+.pro_list .scrollbar{
+	overflow: hidden;
+}
+.pro_list dl{
+    width: 100%;
+    height: 9.333rem;
+    float: left;
+    border-top: 1px solid #707070;
+}
+.pro_list dt{
+    width: 7.25rem;
+    height: 7.041rem;
+    border: 1px solid #C9C9CB;
+    float: left;
+    margin: 1rem .666rem 0 .625rem;
+}
+.pro_list dt img{
+	width: 7.25rem;
+    height: 7.041rem;
+}
+.pro_list dd{
+    margin-top: 1rem;
+    line-height: 1.875rem;
+    font-size: 1.083rem;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.pro_list .price{
+    float: left;
+    width: 7.458rem;
+}
+.pro_list .price span{
+    color: #F62974;
+    font-size: 1.208rem;
+    font-weight: bold;
+    margin-right: .791rem;
+}
+.pro_list .price del{
+    color: #BCBABB;
+    font-size: .833rem;
+}
+.pro_list .price em{
+    font-size: .833rem;
+    font-style: normal;
+    color: #000000;
+}
+.pro_list .addCar{
+    float: left;
+    width: 4.875rem;
+    height: 2.25rem;
+    background: url("../image/3.png") no-repeat;
+    background-size: 100% 100%;
+    margin-left: 3.541rem;
+    margin-top: .666rem;
+}
+

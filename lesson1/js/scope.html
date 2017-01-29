@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ng的指令</title>
+	<link rel="stylesheet" href="">
+	<script src='js/angular.js'></script>
+	<script>
+		var app = angular.module("myApp",[]);
+
+		app.controller('testCtrl',function($scope) {
+			$scope.sex = 0;
+			$scope.text = '我是测试数据';
+
+			
+			$scope.list = [
+				{id:0,name:'程娇'},{id:1,name:'王琦'},{id:2,name:'你猜'}
+			];
+			
+
+			$scope.arr = [1,1,1];
+
+		})
+	
+	</script>
+</head>
+<body>
+	<div ng-controller='testCtrl'>
+		
+		<!-- ng-if 决定元素是显示隐藏 不符合条件不生成dom标签-->
+		<div>性别:
+			<span ng-if='sex==1'>男</span>
+			<span ng-if='sex==0'>女</span>
+		</div>
+		<!-- ng-show ng-hide 显示隐藏 -->
+		<div>性别show-hide:
+			<span ng-show='sex==0'>女</span>
+			<span ng-show='sex==1'>男</span>
+		</div>
+
+		<!-- ng-value 单向数据绑定-->
+		<div>
+			<p>	
+			<!-- 单向绑定 | 对input绑定一个值 -->
+				单向数据绑定:<input type="text" ng-value='sex'>
+			</p>
+			<p>
+				双向数据绑定:<input type="text" ng-model='sex'>
+			</p>
+			<p>将代码显示到页面上1:{{text}}</p>
+			<!-- <p>将代码显示到页面上:<div ng-bind-html="text"></div></p> -->
+		</div>
+	
+		<!-- 循环 ng-repeat -->
+		<div>
+				<table>
+					<thead>
+						<td>序号</td>
+						<td>名称</td>
+						<td>操作</td>
+					</thead>
+					<tbody>
+					<!-- 对要循环显示的标签添加repeat-->
+						<tr ng-repeat='o in list'>
+							<td>{{o.id}}</td>
+							<td>{{o.name}}</td>
+							<td>
+								<button>修改</button><button>删除</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- 如果在数据重复的情况下 使用track by 进行循环  -->
+				<p ng-repeat="o in arr track by $index">{{o}}</p>
+		</div>
+		
+	</div>
+
+</body>
+</html>

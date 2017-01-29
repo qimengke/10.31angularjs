@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ng的scope作用域</title>
+	<link rel="stylesheet" href="">
+	<script src='js/angular.js'></script>
+	<script>
+		var app = angular.module("myApp",[]);
+		//scope 作用域
+		//ng在程序运行时候 生成全局作用域 $rootScope
+		//angular全局方法 run
+
+		//依赖注入
+		app.run(function($rootScope) {
+			$rootScope.demo = "我是全局作用域";
+		})
+		//ng-controller 用于对某块特定区域或进行程序管理：
+		//$scope是$rootScope的一个子节点,$scope通过$rootScope生成
+		//1.controller 可以调用全局的rootScope
+		//2.如果controller中的变量与rootScope重复，就近原则
+		app.controller("loginCtrl",function($scope) {
+			console.info("loginCtrl",$scope)
+			$scope.userName = '我是阳光';
+			$scope.demo = '我是loginCtrl下的demo';
+		})
+		//3.controller之间scope变量不允许共享
+		//4.controller可以包含controller
+		//5.scope根据controller的层级关系 也允许进行包裹生成子父级关系
+		app.controller("registerCtrl",function($scope) {
+
+		}).controller('sexCtrl',function($scope) {
+			console.info("性别",$scope);
+		}).controller('indexCtrl',function($scope){
+			
+		})
+
+	</script>
+</head>
+<body>
+	{{demo}}
+	<div ng-controller='loginCtrl'>
+		<p>loginCtrl调用root：{{demo}}</p>
+		<p>loginCtrl调用自己userName:{{userName}}</p>
+
+		<div ng-controller='sexCtrl'>
+			<p>性别中调用userName:{{userName}}</p>
+		</div>
+
+	</div>
+
+	<div ng-controller='registerCtrl'>
+		<p>register中的userNAME:{{userName}}</p>
+	</div>
+	
+	
+	<div ng-controller='indexCtrl'>
+		<p>index中的userNAME:{{userName}}:{{demo}}</p>
+	</div>
+</body>
+</html>
